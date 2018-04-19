@@ -1,0 +1,44 @@
+{
+  "name": "jest-custom-environment-no-import",
+  "version": "0.1.0",
+  "description":
+    "Unexpected token import when using custom Jest test environments.",
+  "main": "index.js",
+  "scripts": {
+    "build": "babel src --out-dir dist",
+    "eslint:fix": "eslint -c .eslintrc.json --fix src",
+    "eslint:check":
+      "eslint --print-config .eslintrc.json | eslint-config-prettier-check",
+    "production": "node dist",
+    "start": "babel-node src",
+    "test": "jest --no-cache",
+    "watch": "nodemon --exec yarn start"
+  },
+  "keywords": ["base", "javascript", "node.js"],
+  "author": "Jake Klassen",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/cli": "^7.0.0-beta.42",
+    "@babel/core": "^7.0.0-beta.44",
+    "@babel/node": "^7.0.0-beta.42",
+    "@babel/preset-env": "^7.0.0-beta.42",
+    "babel-core": "^7.0.0-0",
+    "babel-eslint": "^8.2.2",
+    "babel-jest": "^22.4.3",
+    "eslint": "^4.6.1",
+    "eslint-config-airbnb-base": "^12.0.0",
+    "eslint-config-prettier": "^2.4.0",
+    "eslint-plugin-import": "^2.7.0",
+    "eslint-plugin-prettier": "^2.2.0",
+    "jest": "^22.4.3",
+    "jest-environment-node": "^22.4.3",
+    "nodemon": "^1.12.0",
+    "prettier": "^1.6.1"
+  },
+  "dependencies": {},
+  "jest": {
+    "testEnvironment": "./__tests__/_helpers_/environments/integration.js",
+    "testPathIgnorePatterns": ["/node_modules/", "/_helpers_/"],
+    "verbose": true
+  }
+}
