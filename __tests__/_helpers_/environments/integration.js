@@ -1,6 +1,6 @@
 import NodeEnvironment from 'jest-environment-node';
 
-export default class IntegrationEnvironment extends NodeEnvironment {
+class IntegrationEnvironment extends NodeEnvironment {
   async setup() {
     await super.setup();
   }
@@ -13,3 +13,5 @@ export default class IntegrationEnvironment extends NodeEnvironment {
     return super.runScript(script);
   }
 }
+
+export default IntegrationEnvironment;

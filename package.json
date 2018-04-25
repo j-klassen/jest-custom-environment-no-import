@@ -11,7 +11,7 @@
       "eslint --print-config .eslintrc.json | eslint-config-prettier-check",
     "production": "node dist",
     "start": "babel-node src",
-    "test": "jest --no-cache",
+    "test": "node -r esm ./node_modules/.bin/jest --no-cache",
     "watch": "nodemon --exec yarn start"
   },
   "keywords": ["base", "javascript", "node.js"],
@@ -30,6 +30,7 @@
     "eslint-config-prettier": "^2.4.0",
     "eslint-plugin-import": "^2.7.0",
     "eslint-plugin-prettier": "^2.2.0",
+    "esm": "^3.0.26",
     "jest": "^22.4.3",
     "jest-environment-node": "^22.4.3",
     "nodemon": "^1.12.0",
