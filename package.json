@@ -38,7 +38,8 @@
   },
   "dependencies": {},
   "jest": {
-    "testEnvironment": "./__tests__/_helpers_/environments/integration.js",
+    "testEnvironment":
+      "./__tests__/_helpers_/environments/integration.index.js",
     "testPathIgnorePatterns": ["/node_modules/", "/_helpers_/"],
     "verbose": true
   }
